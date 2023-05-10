@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JDM Login</title>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <header>    
+        <div id="nav_site">
+            <div id="icone_site">
+                <img id="icon" src="img/storeLogo.png" alt="icon_site">
+            </div>
+            <a id="btn_cadastro" href="login.html">
+                LOGIN
+            </a>
+        </div>
+    </header>
+    <hr>
+    <div id="video_login">    
+        <div id="video_div">
+            <div id="frase">
+                <span>Os melhores carros estão aqui!</span>
+            </div>
+            <hr>
+            <video loop onclick="controleVideo()" id="video_r">
+                <source id="video_link" src="" type="video/mp4">
+            </video>
+        </div>
+        <div id="login_div">
+            <div id="formulario">
+                <div hidden id="resultadoGERAL" class="resultados"></div>
+                <div id="divNome"> 
+                    <div hidden id="resultadoNOME" class="resultados"></div>
+                    <input placeholder="DIGITE O NOME" id="nome" name="nome" type="text">
+                </div>
+                <div id="divEmail">
+                    <div hidden id="resultadoEMAIL" class="resultados"></div>
+                    <input placeholder="DIGITE O EMAIL" type="email" id="email" name="email">
+                </div>
+                <div id="divSenhas">
+                    <div hidden id="resultadoSENHAS" class="resultados"></div>
+                    <input placeholder="DIGITE A SENHA" type="password" name="senha" id="senha">
+                    <input placeholder="CONFIRME A SENHA" type="password" id="confirmarSenha" name="confirmarSenha">
+                </div>
+                <div id="divCEP" >
+                    <div hidden id="resultadoCEP"></div>
+                    <input placeholder="DIGITE O CEP" name="cep" id="cep" type="text">
+                    <button value="0" onclick="consultarCEP()" id="consultar" name="consultar"><img id="check" src="img/simboloCheck.png" alt="simboloChecado"></button>
+                </div>
+                <div id="divTelefone">
+                    <div hidden id="resultadoTELEFONE" class="resultados"></div>
+                    <input placeholder="DIGITE O TELEFONE" type="tel" id="telefone" name="telefone">
+                </div>
+                <div id="divSubmit">
+                    <button onclick="submit()" id="cadastrar" name="cadastrar">CADASTRAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <footer>
+        <img id="icon_footer" src="img/storeLogo.png" alt="icon_site">
+        <ul>
+            <li>Vinicius Luciano da Silva</li>
+            <li>FullStack</li>
+            <li>Python</li>
+            <li>PHP</li>
+            <li>Javascript</li>
+            <li>CSS</li>
+        </ul>
+        <div id="footer_link">
+            CONTATO:
+            <ul>
+                <li>
+                    <a href="https://instagram.com/vinicius.luciano.927?igshid=ZDdkNTZiNTM=" target="_blank">
+                        <img src="img/instagram_icon.png" alt="instagram">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://linkedin.com" target="_blank">
+                        <img src="img/linkedin_icon.png" alt="linkedin">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

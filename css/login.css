@@ -1,0 +1,177 @@
+html{
+    font-family: "TT Supermolot Neue";
+    background-image: url("../img/fundo.jpg");
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+#nav_site{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: white;
+}
+#icon{
+    width: 150px;
+    height: 75px;
+    margin: 10px;
+    cursor: pointer;
+}
+#icon_footer{
+    width: 90px;
+    height: 45px;
+    margin: 10px;
+    cursor: pointer;
+}
+footer{
+    display: flex;
+    height: 150px;
+    background-color: white;
+    justify-content: space-around;
+    align-items: flex-start;
+    font-size: 100%;
+}
+footer ul{
+    flex-direction: column;
+    display: flex;
+    list-style: none;
+    width: fit-content;
+    height: 100%;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+footer ul li{
+    cursor: pointer;
+    margin: 6px;
+}
+#footer_link{
+    margin: 10px;
+}
+#footer_link ul li img{
+    width: 40px !important;
+    height: 40px !important;
+    float: left !important;
+}
+#footer_link ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+hr{
+    margin: 0;
+    border-color: rgba(151,27,30,255);
+    background-color: rgba(151,27,30,255);
+    height: 2px;
+}
+#video_login{
+    width: 100%;
+    height: fit-content;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    display: flex;
+    align-content: center;
+}
+#video_div{
+    width: fit-content;
+    height: fit-content;
+    background-color: rgb(0, 0, 0);
+    border-style: solid;
+    border-color: rgba(151,27,30,255) ;
+}
+#frase{
+    font-size: xx-large;
+    color: white;
+    text-align: center;
+    margin: 10px;
+}
+#video_r{
+    margin: 0;
+    padding: 0;
+}
+#video_r{
+    cursor: pointer;
+}
+#login_div{
+    position: relative;
+}
+#form{
+    text-align: center;
+    align-items: center;
+    margin: 15px;
+    height: 100%;
+}
+#frase_login{
+    font-size: x-large;
+    margin: 5px;
+}
+#retorno_login{
+    margin: 5px;
+    color: red;
+}
+#form label{
+    display: inline-block;
+    width: 100px;
+    margin: 10px;
+}
+#btn_cadastro{
+    background-color: rgba(151,27,30,255);
+    padding: 8px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    margin-right: 30px;
+}
+#btn_cadastro:hover{
+    background-color: red;
+    transition: 0.2s linear;
+    transform: scale(1.03);
+}
+button{
+    width: 75%;
+    height: 50px;
+    padding: 8px;
+    cursor: pointer;
+    color: black;
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+    margin: 15px;
+    text-align: center;
+}
+button:hover{
+    background-color: rgb(48, 252, 48);
+    transition: 0.2s linear;
+    transform: scale(1.03);
+}
+input{
+    width: 70%;
+    padding: 8px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    margin: 15px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+    border-style: solid;
+    border-color: rgba(151,27,30,255);
+    outline: none;
+}
+input:focus{
+    border-color: red;
+    transition: 0.3s linear;
+}

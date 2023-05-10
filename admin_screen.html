@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <script src="js/verifica_sessions_admin.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Screen</title>
+    <script src="js/admin_screen.js"></script>
+    <link rel="stylesheet" href="css/admin_screen.css">
+</head>
+<body>
+    <header>
+        <img onclick="redirect()" id="icon" src="img/storeLogo.png" alt="storeLogo">
+        <p>
+            Painel do Admin
+        </p>
+        <a onclick="sair()" id="sair">SAIR</a>
+    </header>
+    <hr>
+    <div id="actions">
+        <!--<button id="btn_edit" onclick="modal_edit()">Editar</button>-->
+        <button id="btn_insert" onclick="modal_insert()">Novo Carro+</button>
+    </div>
+    <div id="content">
+        <div id="table_container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            ID
+                        </th>
+                        <th>
+                            NOME
+                        </th>
+                        <th>
+                            MARCA
+                        </th>
+                        <th>
+                            MODELO
+                        </th>
+                        <th>
+                            COR
+                        </th>
+                        <th>
+                            KM
+                        </th>
+                        <th>
+                            ANO
+                        </th>
+                        <th>
+                            PREÇO
+                        </th>
+                        <th>
+                            CAMINHO
+                        </th>
+                        <th>
+                            AÇÕES
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+<!--Modals-->
+    <div id="edit" class="fade closed">
+        <div id="modal_edit">
+            <div id="modal_header">
+                <h1>Editar</h1>
+                <button id="x_edit" class="x" onclick="modal_edit()">X</button>
+            </div>
+            <hr>
+            <div id="modal_body">
+                    <label for="id">ID: </label>
+                    <input id="id" disabled type="text" placeholder="ID">
+
+                    <label for="nome">Nome: </label>
+                    <input id="nome" type="text" placeholder="NOME">
+                    <br>
+                    <label for="marca">Marca: </label>
+                    <input id="marca" type="text" placeholder="MARCA">
+
+                    <label for="modelo">Modelo: </label>
+                    <input id="modelo" type="text" placeholder="MODELO">
+                    <br>
+                    <label for="cor">Cor: </label>
+                    <input id="cor" type="text" placeholder="COR">
+
+                    <label for="km">Km: </label>
+                    <input id="km" type="text" placeholder="KM">
+                    <br>
+                    <label for="ano">Ano: </label>
+                    <input id="ano" type="text" placeholder="ANO">
+
+                    <label for="preco">Preço: </label>
+                    <input type="text" id="preco" placeholder="PREÇO">
+                    <br>
+                    <label for="caminho">Caminho: </label>
+                    <input type="text" id="caminho" placeholder="CAMINHO">
+                    <br>
+                    <button onclick="update()">Salvar</button>
+            </div>
+            <div id="modal_footer">
+
+            </div>
+        </div>
+    </div>
+<!--#############################################################-->
+    <div id="insert" class="fade closed">
+        <div id="modal_insert">
+            <div id="modal_header">
+                <h1>Inserindo</h1>
+                <button id="x_insert" class="x" onclick="modal_insert()">X</button>
+            </div>
+            <hr>
+            <div id="modal_body">
+                <label for="insertNome">Nome: </label>
+                <input type="text" placeholder="NOME" id="insertNome">
+
+                <label for="insertMarca">Marca: </label>
+                <input type="text" placeholder="MARCA" id="insertMarca">
+
+                <label for="insertModelo">Modelo: </label>
+                <input type="text" placeholder="MODELO" id="insertModelo">
+
+                <label for="insertCor">Cor: </label>
+                <input type="text" placeholder="COR" id="insertCor">
+
+                <label for="insertKm">Km: </label>
+                <input type="text" placeholder="KM" id="insertKm">
+
+                <label for="insertAno">Ano: </label>
+                <input type="text" placeholder="ANO" id="insertAno">
+
+                <label for="insertPreco">Preco: </label>
+                <input type="text" placeholder="PRECO" id="insertPreco">
+
+                <label for="insertCaminho">Caminho: </label>
+                <input type="text" placeholder="CAMINHO" id="insertCaminho">
+
+                <button onclick="insert()">Cadastrar</button>
+
+            </div>
+            <div id="modal_footer">
+            </div>
+        </div>
+    </div>
+    <script defer src="js/admin_screen_modals.js"></script>
+    <script defer src="js/admin_screen.js"></script>
+<!--Modals-->
+</body>
+</html>

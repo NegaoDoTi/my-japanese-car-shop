@@ -1,0 +1,54 @@
+html{
+    font-family: "TT Supermolot Neue";
+    background-image: url("../img/fundo.jpg");
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.main_container{
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    border-style: solid;
+    text-align: center;
+    border-color: rgba(151,27,30,255);
+    white-space: pre-line;
+}
+input{
+    padding: 10px;
+    margin: 10px;
+    color: black;
+    border-color: rgba(151,27,30,255);
+    border-radius: 8px;
+    border-style: solid;
+}
+
+button{
+    background-color: rgba(151,27,30,255);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px;
+    width: 70%;
+}
+button:hover{
+    background-color: red;
+    transform: scale(1.2);
+    transition:  0.2s linear;
+    cursor: pointer;
+}
+
+div[class="confirm"]{
+
+    color: red;
+
+}

@@ -1,0 +1,326 @@
+html{
+    font-family: "TT Supermolot Neue";
+    background-image: url("../img/fundo.jpg");
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+body.modal_opened{
+    overflow: hidden;
+}
+
+hr{
+    margin: 0;
+    border-color: rgba(151,27,30,255);
+    background-color: rgba(151,27,30,255);
+    height: 2px;
+}
+
+.fade{
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.308);
+    backdrop-filter: blur(10px);
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+#modal_edit, #modal_insert{
+    width: 55%;
+    min-width: 480px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    z-index: 10;
+    border-style: solid;
+    border-color: rgba(151,27,30,255);
+}
+
+#modal_edit{
+    height: fit-content;
+}
+
+#modal_header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.x{
+    background-color: red;
+    width: 30px;
+    height: 30px;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.fade.open{
+    display: flex;
+    height: 100svh;
+}
+.fade.closed{
+    display: none;
+}
+
+
+@keyframes openModals {
+    from{
+        opacity: 0;
+        transform: translate(0, -20px);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+.open #modal_edit{
+    animation: openModals 0.5s;
+}
+
+.open #modal_insert{
+    animation: openModals 0.5s;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header p{
+    color:  rgba(151,27,30,255);
+    font-size: 25px;
+}
+
+a{
+    width: 35px;
+    height: 25px;
+    padding: 8px;
+    background-color: rgba(151,27,30,255);
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    margin-top: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+a:hover{
+    background-color: red;
+    transform: scale(1.03);
+    transition: 0.2s linear;
+}
+
+#icon{
+    width: 150px;
+    height: 75px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+#btn_insert{
+    background-color: greenyellow;
+    width: 70%;
+    height: 55px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+}
+#btn_insert:hover{
+    background-color: lightgreen;
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: 0.2s linear;
+}
+#actions{
+    display: flex;
+    justify-content: center;
+}
+#actions button{
+    margin: 50px;
+}
+#table_container{
+    color: white;
+    padding: 20px;
+    border-style: solid;
+}
+
+#content{
+    justify-content: center;
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+#table_container{
+    justify-content: center;
+    display: flex;
+    background-color: white;
+    border-style: solid;
+    width: fit-content;
+    border-color: rgba(151,27,30,255);
+    border-radius: 8px;
+    height: fit-content;
+}
+#table_container table{
+    color: black;
+}
+
+table th, td{
+    border: 1.5px;
+    border-style:  solid;
+    border-color: rgba(151,27,30,255);
+    border-collapse: collapse;
+    padding: 8px;
+    margin: 0;
+    border-radius: 10px;
+}
+th{
+    background-color: rgba(151,27,30,255);
+    color: white;
+}
+table{
+    width: 100%;
+}
+td{
+    text-align: center;
+}
+
+
+div[id="edit"] #modal_body{
+    text-align: center;
+    justify-content: center;
+    height: 100%;
+    word-wrap: wrap;
+}
+
+div[id="edit"] #modal_body input{
+    
+    padding: 8px;
+    margin: 8px;
+    border-style: solid;
+    border-color: rgba(151,27,30,255);
+    border-radius: 8px;
+    outline: none;
+}
+
+
+div[id="edit"] #modal_body input:focus{
+    
+    border-color: red;
+    transition: 0.2s linear;
+}
+
+div[id="edit"] #modal_body label{
+    display: inline-block;
+    width: 60px;
+}
+
+
+div[id="edit"] #modal_body button{
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+
+
+div[id="edit"] #modal_body button:hover{
+    background-color: rgb(48, 252, 48);
+    transition: 0.2s linear;
+    transform: scale(1.03);
+}
+
+
+#table_container button{
+    margin: 5px;
+    background-color: rgb(48, 252, 48);
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+#table_container button:hover{
+    transform: scale(1.03);
+    transition: 0.2s linear;
+}
+
+
+#table_container a{
+    background-color: red;
+    margin: 5px;
+}
+
+
+#table_container a:hover{
+    transform: scale(1.03) !important;
+    transition: 0.2s linear !important;
+}
+
+
+
+
+
+
+
+
+div[id="insert"] #modal_body{
+    text-align: center;
+    justify-content: center;
+    height: 100%;
+    word-wrap: wrap;
+}
+
+div[id="insert"] #modal_body input{
+    
+    padding: 8px;
+    margin: 8px;
+    border-style: solid;
+    border-color: rgba(151,27,30,255);
+    border-radius: 8px;
+    outline: none;
+}
+
+
+div[id="insert"] #modal_body input:focus{
+    
+    border-color: red;
+    transition: 0.2s linear;
+}
+
+div[id="insert"] #modal_body label{
+    display: inline-block;
+    width: 135px;
+}
+
+
+div[id="insert"] #modal_body button{
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+
+
+div[id="insert"] #modal_body button:hover{
+    background-color: rgb(48, 252, 48);
+    transition: 0.2s linear;
+    transform: scale(1.03);
+}
